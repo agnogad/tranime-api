@@ -17,5 +17,8 @@
   "featured": false,
   "trending": false,
   "createdAt": "2026-06-14T10:46:59.393Z",
-  "updatedAt": "2026-06-14T10:51:55.563Z"
+  "updatedAt": "2026-06-14T11:23:26.038Z",
+  "types": [
+    "sub"
+  ]
 }

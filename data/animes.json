@@ -1,21 +1,5 @@
 [
   {
-    "id": "mqdnpw8r4uxnjre",
-    "slug": "my-only-attack-total-invincibility",
-    "title": "My Only Attack, Total Invincibility",
-    "cover": "https://i.ibb.co/Vc7NKjdm/file-00000000b14c720a8f30b67685f8e16a.jpg",
-    "status": "completed",
-    "categories": [
-      "action",
-      "drama"
-    ],
-    "episodeCount": 1,
-    "featured": false,
-    "trending": false,
-    "createdAt": "2026-06-14T10:46:59.393Z",
-    "updatedAt": "2026-06-14T10:51:55.563Z"
-  },
-  {
     "id": "mqdirx0dzepvkpm",
     "slug": "i-am-the-electromagnetic-overlord",
     "title": "I Am the Electromagnetic Overlord",
@@ -29,6 +13,22 @@
     "featured": false,
     "trending": false,
     "createdAt": "2026-06-14T08:27:32.497Z",
-    "updatedAt": "2026-06-14T08:53:33.031Z"
+    "updatedAt": "2026-06-14T11:23:33.721Z"
+  },
+  {
+    "id": "mqdnpw8r4uxnjre",
+    "slug": "my-only-attack-total-invincibility",
+    "title": "My Only Attack, Total Invincibility",
+    "cover": "https://i.ibb.co/Vc7NKjdm/file-00000000b14c720a8f30b67685f8e16a.jpg",
+    "status": "completed",
+    "categories": [
+      "action",
+      "drama"
+    ],
+    "episodeCount": 1,
+    "featured": false,
+    "trending": false,
+    "createdAt": "2026-06-14T10:46:59.393Z",
+    "updatedAt": "2026-06-14T11:23:26.038Z"
   }
 ]

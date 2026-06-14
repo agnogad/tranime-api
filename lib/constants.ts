@@ -14,6 +14,11 @@ export const PROVIDERS = [
   'VidMoly',
 ] as const;
 
+export const ANIME_TYPES = [
+  { label: 'Sub', value: 'sub' },
+  { label: 'Dub', value: 'dub' },
+] as const;
+
 export const QUALITIES = [
   '360p',
   '480p',

@@ -8,7 +8,7 @@ import { toast } from 'sonner';
 import { animeSchema, AnimeFormData } from '@/lib/schemas';
 import { Category } from '@/lib/types';
 import { generateId, slugify } from '@/lib/utils';
-import { ANIME_STATUS } from '@/lib/constants';
+import { ANIME_STATUS, ANIME_TYPES } from '@/lib/constants';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -61,6 +61,7 @@ export function AnimeForm({ initialData, mode }: AnimeFormProps) {
       year: new Date().getFullYear(),
       status: 'ongoing',
       categories: [],
+      types: ['sub'],
       cover: '',
       banner: '',
       poster: '',
@@ -78,6 +79,7 @@ export function AnimeForm({ initialData, mode }: AnimeFormProps) {
   const watchBanner = watch('banner');
   const watchPoster = watch('poster');
   const watchCategories = watch('categories');
+  const watchTypes = watch('types');
 
   useEffect(() => {
     fetchCategories();
@@ -133,6 +135,17 @@ export function AnimeForm({ initialData, mode }: AnimeFormProps) {
       toast.error(error instanceof Error ? error.message : 'Failed to save anime');
     } finally {
       setSubmitting(false);
+    }
+  }
+
+  function toggleType(type: 'dub' | 'sub') {
+    const current = watchTypes || [];
+    if (current.includes(type)) {
+      if (current.length > 1) {
+        setValue('types', current.filter((t) => t !== type));
+      }
+    } else {
+      setValue('types', [...current, type]);
     }
   }
 
@@ -295,6 +308,44 @@ export function AnimeForm({ initialData, mode }: AnimeFormProps) {
             {errors.categories && (
               <p className="text-sm text-destructive mt-2">
                 {errors.categories.message}
+              </p>
+            )}
+          </CardContent>
+        </Card>
+
+        {/* Type (Sub/Dub) */}
+        <Card className="border-border/50">
+          <CardHeader>
+            <CardTitle className="text-lg">Type</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-muted-foreground mb-3">
+              Select available language types for this anime.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {ANIME_TYPES.map((t) => {
+                const isActive = (watchTypes || []).includes(t.value);
+                return (
+                  <button
+                    key={t.value}
+                    type="button"
+                    onClick={() => toggleType(t.value)}
+                    className={`px-4 py-2 rounded-xl text-sm font-medium transition-all border ${
+                      isActive
+                        ? t.value === 'sub'
+                          ? 'bg-blue-600 text-white border-blue-600'
+                          : 'bg-amber-600 text-white border-amber-600'
+                        : 'bg-secondary text-secondary-foreground border-border hover:border-primary/50'
+                    }`}
+                  >
+                    {t.label}
+                  </button>
+                );
+              })}
+            </div>
+            {errors.types && (
+              <p className="text-sm text-destructive mt-2">
+                {errors.types.message}
               </p>
             )}
           </CardContent>

@@ -2,6 +2,8 @@
 // Core Types for Anime CMS
 // ==========================================
 
+export type AnimeType = 'dub' | 'sub';
+
 export interface StreamingProvider {
   provider: string;
   embedUrl: string;
@@ -35,6 +37,7 @@ export interface Anime {
   year: number;
   status: AnimeStatus;
   categories: string[];
+  types: AnimeType[];
   cover: string;
   banner: string;
   poster: string;

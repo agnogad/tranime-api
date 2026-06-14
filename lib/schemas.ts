@@ -45,6 +45,7 @@ export const animeSchema = z.object({
     .max(2100, 'Year must be 2100 or earlier'),
   status: z.enum(['ongoing', 'completed']),
   categories: z.array(z.string()).default([]),
+  types: z.array(z.enum(['dub', 'sub'])).default(['sub']),
   cover: z.string().default(''),
   banner: z.string().default(''),
   poster: z.string().default(''),
