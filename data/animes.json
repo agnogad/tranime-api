@@ -2,7 +2,7 @@
   {
     "id": "mqdq1qqeaozaki7",
     "slug": "en-zayif-ruh-cagirici",
-    "title": "En zayıf ruh çağırıcı",
+    "title": "En zay\u0131f ruh \u00e7a\u011f\u0131r\u0131c\u0131",
     "cover": "https://i.ibb.co/4b6FPPP/file-000000000ec8720ab067636963a04f88.jpg",
     "status": "completed",
     "categories": [
@@ -13,7 +13,10 @@
     "featured": false,
     "trending": false,
     "createdAt": "2026-06-14T11:54:09.885Z",
-    "updatedAt": "2026-06-14T11:54:09.885Z"
+    "updatedAt": "2026-06-14T11:54:09.885Z",
+    "types": [
+      "sub"
+    ]
   },
   {
     "id": "mqdirx0dzepvkpm",
@@ -29,7 +32,10 @@
     "featured": false,
     "trending": false,
     "createdAt": "2026-06-14T08:27:32.497Z",
-    "updatedAt": "2026-06-14T11:23:33.721Z"
+    "updatedAt": "2026-06-14T11:23:33.721Z",
+    "types": [
+      "sub"
+    ]
   },
   {
     "id": "mqdnpw8r4uxnjre",
@@ -45,6 +51,9 @@
     "featured": false,
     "trending": false,
     "createdAt": "2026-06-14T10:46:59.393Z",
-    "updatedAt": "2026-06-14T11:23:26.038Z"
+    "updatedAt": "2026-06-14T11:23:26.038Z",
+    "types": [
+      "sub"
+    ]
   }
 ]
