@@ -7,6 +7,11 @@ export const PROVIDERS = [
   'Gogoanime',
   'MyCloud',
   'Mp4Upload',
+  'Voe',
+  'StreamTape',
+  'Abyss',
+  'SaveFiles',
+  'VidMoly',
 ] as const;
 
 export const QUALITIES = [
