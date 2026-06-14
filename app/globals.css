@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: oklch(0.145 0 0);
+  --color-foreground: oklch(0.985 0 0);
+  --color-card: oklch(0.205 0 0);
+  --color-card-foreground: oklch(0.985 0 0);
+  --color-popover: oklch(0.205 0 0);
+  --color-popover-foreground: oklch(0.985 0 0);
+  --color-primary: oklch(0.585 0.223 25.5);
+  --color-primary-foreground: oklch(0.985 0 0);
+  --color-secondary: oklch(0.269 0 0);
+  --color-secondary-foreground: oklch(0.985 0 0);
+  --color-muted: oklch(0.269 0 0);
+  --color-muted-foreground: oklch(0.708 0 0);
+  --color-accent: oklch(0.269 0 0);
+  --color-accent-foreground: oklch(0.985 0 0);
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-destructive-foreground: oklch(0.985 0 0);
+  --color-border: oklch(0.269 0 0);
+  --color-input: oklch(0.269 0 0);
+  --color-ring: oklch(0.585 0.223 25.5);
+  --color-sidebar: oklch(0.145 0 0);
+  --color-sidebar-foreground: oklch(0.985 0 0);
+  --color-sidebar-accent: oklch(0.269 0 0);
+  --color-sidebar-accent-foreground: oklch(0.985 0 0);
+  --color-sidebar-ring: oklch(0.585 0.223 25.5);
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Dialog animations */
+  --animate-in: animateIn 0.2s ease-out;
+  --animate-out: animateOut 0.2s ease-in;
+  --fade-in: fadeIn 0.2s ease-out;
+  --fade-out: fadeOut 0.2s ease-in;
+  --zoom-in-95: zoomIn95 0.2s ease-out;
+  --zoom-out-95: zoomOut95 0.2s ease-in;
+  --slide-in-from-left-1-2: slideInFromLeft 0.2s ease-out;
+  --slide-out-to-left-1-2: slideOutToLeft 0.2s ease-in;
+  --slide-in-from-top-48p: slideInFromTop 0.2s ease-out;
+  --slide-out-to-top-48p: slideOutToTop 0.2s ease-in;
+  --slide-in-from-top-2: slideInFromTop2 0.2s ease-out;
+  --slide-in-from-bottom-2: slideInFromBottom2 0.2s ease-out;
+  --slide-in-from-left-2: slideInFromLeft2 0.2s ease-out;
+  --slide-in-from-right-2: slideInFromRight2 0.2s ease-out;
+  --slide-out-to-top-2: slideOutToTop2 0.2s ease-in;
+}
+
+@keyframes animateIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes animateOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.95); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes zoomIn95 {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes zoomOut95 {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.95); }
+}
+
+@keyframes slideInFromLeft {
+  from { opacity: 0; transform: translateX(-50%); }
+  to { opacity: 1; transform: translateX(-50%); }
+}
+
+@keyframes slideOutToLeft {
+  from { opacity: 1; transform: translateX(-50%); }
+  to { opacity: 0; transform: translateX(-50%); }
+}
+
+@keyframes slideInFromTop {
+  from { opacity: 0; transform: translateY(-48%); }
+  to { opacity: 1; transform: translateY(-48%); }
+}
+
+@keyframes slideOutToTop {
+  from { opacity: 1; transform: translateY(-48%); }
+  to { opacity: 0; transform: translateY(-48%); }
+}
+
+@keyframes slideInFromTop2 {
+  from { opacity: 0; transform: translateY(-0.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInFromBottom2 {
+  from { opacity: 0; transform: translateY(0.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInFromLeft2 {
+  from { opacity: 0; transform: translateX(-0.5rem); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInFromRight2 {
+  from { opacity: 0; transform: translateX(0.5rem); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideOutToTop2 {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-0.5rem); }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.371 0 0);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.485 0 0);
+}
+
+/* Netflix-inspired gradient */
+.netflix-gradient {
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+}
+
+.anime-card-hover {
+  transition: all 0.3s ease;
+}
+.anime-card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(229, 9, 20, 0.3);
+}

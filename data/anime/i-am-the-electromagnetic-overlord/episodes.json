@@ -1,0 +1,18 @@
+[
+  {
+    "episode": 1,
+    "title": "Episode 1-73",
+    "description": "",
+    "duration": "",
+    "releaseDate": "",
+    "thumbnail": "",
+    "streams": [
+      {
+        "provider": "DoodStream",
+        "embedUrl": "https://streamtape.com/v/xmly9vAoWbForO/I_Am_the_Electromagnetic_Overlord_EP1-73.mp4",
+        "quality": "1080p",
+        "default": true
+      }
+    ]
+  }
+]
