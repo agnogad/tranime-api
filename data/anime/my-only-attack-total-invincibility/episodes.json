@@ -1,0 +1,42 @@
+[
+  {
+    "episode": 1,
+    "title": "Full",
+    "description": "",
+    "duration": "",
+    "releaseDate": "",
+    "thumbnail": "",
+    "streams": [
+      {
+        "provider": "DoodStream",
+        "embedUrl": "https://playmogo.com/e/duqfkksosev7",
+        "quality": "1080p",
+        "default": true
+      },
+      {
+        "provider": "StreamWish",
+        "embedUrl": "https://streamhls.to/e/u6z50h7phsr1",
+        "quality": "1080p",
+        "default": false
+      },
+      {
+        "provider": "Abyss",
+        "embedUrl": "https://abyssplayer.com/cOTe_4eFi",
+        "quality": "1080p",
+        "default": false
+      },
+      {
+        "provider": "StreamTape",
+        "embedUrl": "https://streamtape.com/e/DojJzb33QLTkjrr/",
+        "quality": "1080p",
+        "default": false
+      },
+      {
+        "provider": "Voe",
+        "embedUrl": "https://voe.sx/e/zhlagxtcltcl",
+        "quality": "1080p",
+        "default": false
+      }
+    ]
+  }
+]
