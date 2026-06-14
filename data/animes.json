@@ -1,5 +1,21 @@
 [
   {
+    "id": "mqdq1qqeaozaki7",
+    "slug": "en-zayif-ruh-cagirici",
+    "title": "En zayıf ruh çağırıcı",
+    "cover": "https://i.ibb.co/4b6FPPP/file-000000000ec8720ab067636963a04f88.jpg",
+    "status": "completed",
+    "categories": [
+      "action",
+      "drama"
+    ],
+    "episodeCount": 0,
+    "featured": false,
+    "trending": false,
+    "createdAt": "2026-06-14T11:54:09.885Z",
+    "updatedAt": "2026-06-14T11:54:09.885Z"
+  },
+  {
     "id": "mqdirx0dzepvkpm",
     "slug": "i-am-the-electromagnetic-overlord",
     "title": "I Am the Electromagnetic Overlord",
